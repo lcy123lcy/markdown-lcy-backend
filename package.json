@@ -1,0 +1,68 @@
+{
+  "name": "markdown-lcy-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "lcy 自己的 .md 服务端",
+  "scripts": {
+    "postinstall": "prisma generate",
+    "build": "nest build",
+    "dev": "nest start --watch",
+    "start": "node dist/main",
+    "start:debug": "nest start --debug --watch",
+    "lint": "eslint \"{src,prisma,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,prisma,test}/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"prisma/**/*.prisma\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"prisma/**/*.prisma\"",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@nestjs/jwt": "^10.2.0",
+    "@nestjs/passport": "^10.0.3",
+    "bcrypt": "^5.1.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "@nestjs/common": "^10.4.15",
+    "@nestjs/core": "^10.4.15",
+    "@nestjs/platform-fastify": "^10.4.15",
+    "@nestjs/config": "^3.3.0",
+    "@nestjs/swagger": "^8.0.7",
+    "@prisma/client": "^6.1.0",
+    "fastify": "^5.1.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/passport-local": "^1.0.38",
+    "tsx": "^4.19.2",
+    "@eslint/js": "^9.17.0",
+    "@nestjs/cli": "^10.4.9",
+    "@nestjs/schematics": "^10.2.3",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "typescript-eslint": "^8.18.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2",
+    "prisma": "^6.1.0",
+    "source-map-support": "^0.5.21",
+    "supertest": "^7.0.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "prisma": {
+    "seed": "npx tsx prisma/seed.ts"
+  }
+}

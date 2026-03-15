@@ -1,0 +1,18 @@
+schema: spec-driven
+
+# 项目上下文（注入到各制品指令中）
+context: |
+  项目：markdown-lcy-backend — lcy 自己的 .md 服务端，企业级 TypeScript 后端。
+  技术栈：Node.js 20+、TypeScript 5 strict、pnpm、NestJS + Fastify、Prisma、Zod、Vitest、ESLint + Prettier、OpenAPI。
+  目录：src/ 应用源码，prisma/ schema 与迁移，openspec/ 规格与变更。
+  规范：先写/更新 OpenSpec 变更提案与 tasks，再实现；实现时按 tasks.md 顺序执行并勾选任务。
+
+# 每个工件的规则（可选）
+rules:
+  proposal:
+    - 包含回滚计划或影响范围说明
+    - 明确「为什么」「做什么」「影响」
+  specs:
+    - 使用 Given/When/Then 描述场景
+  tasks:
+    - 任务可验证、按顺序可执行，完成后在 tasks.md 中勾选
